@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # Part 1 — Navigation & File Operations
 pwd
@@ -26,8 +27,8 @@ ls -l notes.txt
 whoami
 date
 ps aux
-pgrep bash
+pgrep bash || true
 
 # Part 5 — Cleanup
 cd ..
-rm -r practice_cli
+rm -rf practice_cli
