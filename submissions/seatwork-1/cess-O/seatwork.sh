@@ -1,5 +1,6 @@
+#!/usr/bin/env bash
 cd ~
-rm -rf practice_cli#!/usr/bin/env bash
+rm -rf practice_cli
 
 pwd
 ls -la
