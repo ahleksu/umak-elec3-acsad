@@ -1,7 +1,7 @@
 # Lab 1 Submission
 
 ## Part B
-**Error Action Name:** <paste error text and bold the action>
+**Error Action Name:** 
 
 **Screenshot (Part B launch denial with username visible):**
 ![Part B Error](part-b-error.png)
