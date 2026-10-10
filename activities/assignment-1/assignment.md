@@ -101,14 +101,17 @@ Answer these six questions. Use only the evidence above and the reference
 sections.
 
 1. State the failure in one sentence. Use the evidence in the log line.
+
 2. Explain why the `course-portal` account cannot read the file. Name its
    owner, group, and others permissions.
    *Hint: Convert `-rw-------` to octal first. Then check whether
    `course-portal` is the file's owner or a group member.*
+
 3. Choose the smallest fix that solves the problem: `400`, `640`, `755`, or
    `777`. Explain why the other three are wrong.
    *Hint: Use the four-option table above. Find the column that needs read
    access.*
+
 4. Put these nine actions in the correct order. Write the letters in
    sequence, for example: `C, A, ...`
 
@@ -126,9 +129,11 @@ sections.
 
    *Hint: Confirm the failure before you inspect it. Inspect before you
    change. Change before you verify.*
+
 5. Name one risk of using `chmod 777` instead of your answer to Question 3.
    *Hint: Check the `777` row in the four-option table. Who gains write and
    execute access?*
+
 6. Name one piece of evidence, beyond a successful command, that proves the
    service works again.
    *Hint: A command can succeed and the service can still be broken. What
@@ -142,6 +147,7 @@ blank.
 > The server-level failure happened in the **___** component. A larger
 > system needs **___** to detect it, **___** to recover from it, and
 > **___** to prove that users are served again.
+
 
 ## How to submit
 
