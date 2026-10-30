@@ -46,6 +46,7 @@ currently-active ones are:
 | [`activities/lab-3/`](activities/lab-3/) | Lab 3: VPC Subnet Planning Case Study |
 | [`activities/seatwork-2/`](activities/seatwork-2/) | Seatwork 2: Build Your Group Linktree Page |
 | [`activities/seatwork-3/`](activities/seatwork-3/) | Seatwork 3: Host Your Linktree Page on Amazon S3 |
+| [`activities/assignment-3/`](activities/assignment-3/) | Assignment 3: Price the Database Before You Build It |
 | [`templates/`](templates/)                         | Shared templates (evidence write-ups, etc.)                      |
 | [`submissions/`](submissions/)                     | Where your work goes — one folder per person/group, per activity |
 | [`.github/`](.github/)                             | PR template and the CI workflow that checks submissions          |
