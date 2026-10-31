@@ -51,7 +51,7 @@ In Seatwork 3, anyone with the link can open your page. Put only what you are co
 
 ## How you submit
 
-Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form that I post in the group chat. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
+Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form: https://forms.gle/4CFvibdjNYqjyjGx5. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
 
 ## Files in this folder
 

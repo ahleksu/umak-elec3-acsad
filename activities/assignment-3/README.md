@@ -44,7 +44,7 @@ The calculator fills in its own defaults, and some of them are expensive. When I
 
 ## How you submit
 
-Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form that I post in the group chat. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
+Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form: https://forms.gle/ftSQ77MaprGrMHEN9. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
 
 ## Files in this folder
 

@@ -10,7 +10,7 @@ due: 2026-11-06, 11:59 PM (Asia/Manila). Your group IAM user stops working at th
 
 # Seatwork 3: Host Your Linktree Page on Amazon S3
 
-> Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form that I post in the group chat. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila). Do not merge your own Pull Request.
+> Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form: https://forms.gle/jks6M7vNMgRqJwwr7. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila). Do not merge your own Pull Request.
 
 This is a self-guided activity. You take the `index.html` from [Seatwork 2](../seatwork-2/seatwork.md) and serve it as a public website from an Amazon S3 bucket. Finish Seatwork 2 first. Read [`README.md`](README.md) before you start. It explains the S3 ideas that each step uses.
 
@@ -107,7 +107,7 @@ Open the endpoint in a private browser window. You see your page. The browser sh
    - `site.png`: your page open in the browser, with the address bar visible.
 3. Crop the AWS console top bar out of the first two screenshots. The top bar shows the account number.
 4. Copy [`submission-template.md`](submission-template.md) to the same folder as `submission.md`. Fill in your section, group number, group IAM user, bucket name, website endpoint, and one line per groupmate (GitHub username and what each one did).
-5. Open one Pull Request. One groupmate puts its link in the Google Form for the whole group.
+5. Open one Pull Request. One groupmate submits its link in the Google Form for the whole group: https://forms.gle/jks6M7vNMgRqJwwr7.
 
 | Check | Points |
 | --- | --- |

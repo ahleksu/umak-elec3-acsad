@@ -58,7 +58,7 @@ One small page costs well under one cent a month. Keep your bucket until grading
 
 ## How you submit
 
-Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form that I post in the group chat. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
+Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form: https://forms.gle/jks6M7vNMgRqJwwr7. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila).
 
 ## Files in this folder
 

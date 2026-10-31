@@ -10,7 +10,7 @@ due: 2026-11-06, 11:59 PM (Asia/Manila)
 
 # Assignment 3: Price the Database Before You Build It
 
-> Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form that I post in the group chat. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila). Do not merge your own Pull Request.
+> Submit one Pull Request per group to this repository. Then one groupmate submits the Pull Request link in the Google Form: https://forms.gle/ftSQ77MaprGrMHEN9. Both are due on Friday, November 6, 2026, at 11:59 PM (Asia/Manila). Do not merge your own Pull Request.
 
 This is a self-guided activity. A cloud engineer prices a database before anyone creates it. Your group prices an Amazon RDS for MySQL database for the client from your [Lab 3](../lab-3/lab.md) case, in the AWS Pricing Calculator. You create nothing in AWS, so this activity costs nothing. Read [`README.md`](README.md) before you start. It explains the choices that change the price.
 
@@ -48,7 +48,7 @@ The **Nodes** field is the number of DB instances. Option C uses 2 nodes because
    - A recommendation of five sentences: which option fits your client, and why. Use the client's users, the cost of downtime for that client, and the read load.
    - The answer to this question: why is a Multi-AZ standby not the same as a read replica?
    - One line per groupmate: GitHub username and what each one did.
-3. Open one Pull Request. One groupmate puts its link in the Google Form for the whole group.
+3. Open one Pull Request. One groupmate submits its link in the Google Form for the whole group: https://forms.gle/ftSQ77MaprGrMHEN9.
 
 | Check | Points |
 | --- | --- |
