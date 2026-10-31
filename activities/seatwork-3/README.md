@@ -4,6 +4,8 @@ This is a self-guided activity. You take your page from [Seatwork 2](../seatwork
 
 Work through this page first. It explains the S3 ideas that each step uses. Then follow the steps in [`seatwork.md`](seatwork.md). Finish Seatwork 2 first.
 
+![The demo linktree page served from the S3 website endpoint](../../assets/screenshots/seatwork3-step6-live-site.png)
+
 ## What you do
 
 This is group work. You sign in with your group IAM user, the same user from Lab 1 and Lab 2. Your group submits one Pull Request.
