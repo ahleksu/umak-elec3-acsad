@@ -189,7 +189,7 @@ If you cannot sign in, or a VPC page does not load after you refresh it two time
 1. Write `NO ACCESS` and the exact error message in each Part A answer that you did not complete. Save a screenshot of the error under each screenshot file name.
 2. Answer A5, A7, and A8 with the example VPC `10.0.0.0/16` in section 3 of the README.
 3. Complete Part B as usual.
-4. Message me in the class channel before the deadline.
+4. Message me in the group chat before the deadline.
 
 You do not lose points for an access problem that I confirm.
 
@@ -227,10 +227,10 @@ submissions/assignment-2/<your-github-username>/
 7. Open the Google Form: <https://forms.gle/KBYrjEwoLRqre9fE9>. Enter your full name, your student number, your section, your GitHub username, and the link to your Pull Request.
 8. Submit the form before Wednesday, October 7, 2026, at 11:59 PM (Asia/Manila).
 
-Do not write your full name or your student number in the Pull Request. Do not merge your own Pull Request. Do not post your answers or screenshots in the class channel.
+Do not write your full name or your student number in the Pull Request. Do not merge your own Pull Request. Do not post your answers or screenshots in the group chat.
 
 ## Working with others and AI tools
 
-This is individual work. You can talk about the concepts in the README with classmates. Write every answer and draw your diagram yourself. The Pull Requests of your classmates are public. Do not copy from them. If something is unclear, message me in the class channel.
+This is individual work. You can talk about the concepts in the README with classmates. Write every answer and draw your diagram yourself. The Pull Requests of your classmates are public. Do not copy from them. If something is unclear, message me in the group chat.
 
 You can use an AI tool to understand a concept. Write the answers in your own words. Part A answers must come from what you saw in the console.

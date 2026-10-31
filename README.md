@@ -68,4 +68,4 @@ activity — see each activity's own `.md` file for its exact weight.
 
 ## Questions
 
-Ask me in our class channel, or open an Issue on this repo.
+Ask me in our group chat, or open an Issue on this repo.

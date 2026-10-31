@@ -90,4 +90,4 @@ A groupmate proposes the four subnet blocks in your row, P1 to P4, for future us
 - Recheck the block size first. Most wrong last addresses come from a wrong total.
 - Check that your first usable address is 4 more than the first address, and that your last usable address is 1 less than the last address.
 - Compare your steps with the worked example in [`README.md`](README.md).
-- Message me in the class channel with your group number and the task number.
+- Message me in the group chat with your group number and the task number.
