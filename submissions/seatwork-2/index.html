@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Group 0 Links | ELEC3 Cloud Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Theme: green + yellow, Poppins */
+    :root {
+      --bg: #f4faf0;
+      --card: #ffffff;
+      --text: #1b2a1f;
+      --muted: #4a5d4f;
+      --green: #1f7a3d;
+      --green-dark: #0f4d27;
+      --green-soft: #dff1df;
+      --yellow: #ffc933;
+      --yellow-soft: #fff3c4;
+      --ring: #bfe3c4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 0 8px 48px; }
+
+    /* Hero header */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: #fff;
+      text-align: center;
+      padding: 56px 16px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; left: 0; right: 0; bottom: -1px; height: 40px;
+      background: var(--bg);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+    .logo { width: 60px; height: 60px; margin: -20px; animation: float 4s ease-in-out infinite; }
+    .hero h1 { margin: 0 0 6px; font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 700; }
+    .hero h1 span { color: var(--yellow); }
+    .hero .motto { margin: 0 0 14px; font-size: 1.05rem; font-weight: 500; color: var(--yellow-soft); }
+    .hero .course {
+      display: inline-block; padding: 4px 16px; border-radius: 999px;
+      background: rgba(255,255,255,.15); font-size: .85rem;
+    }
+
+    h2.section-title { text-align: center; color: var(--green-dark); font-size: 1.6rem; margin: 40px 0 6px; }
+    .section-sub { text-align: center; color: var(--muted); margin: 0 0 24px; }
+
+    /* Member cards */
+    .members { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; margin-top: 8px; }
+    .member {
+      background: var(--card);
+      border-radius: 16px;
+      border-top: 6px solid var(--yellow);
+      box-shadow: 0 6px 18px rgba(15, 77, 39, .10);
+      padding: 28px 22px;
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+      opacity: 0;
+      animation: rise .6s ease forwards;
+    }
+    .member:nth-child(2) { animation-delay: .1s; }
+    .member:nth-child(3) { animation-delay: .2s; }
+    .member:nth-child(4) { animation-delay: .3s; }
+    .member:hover { transform: translateY(-8px); box-shadow: 0 16px 30px rgba(15, 77, 39, .20); }
+    .avatar {
+      width: 112px; height: 112px; margin: 0 auto 16px; border-radius: 50%;
+      background: var(--green-soft); color: var(--green-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem; font-weight: 700; overflow: hidden;
+      transition: transform .3s ease;
+    }
+    .member:hover .avatar { transform: scale(1.06) rotate(-3deg); }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .member h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 600; color: var(--green-dark); }
+    .role {
+      display: inline-block; margin: 0 0 12px; padding: 2px 12px; border-radius: 999px;
+      background: var(--yellow-soft); color: var(--green-dark);
+      font-size: .75rem; font-weight: 700; letter-spacing: .05em;
+    }
+    .bio { margin: 0 0 16px; color: var(--muted); font-size: .95rem; }
+    .social { display: flex; justify-content: center; gap: 10px; margin-bottom: 18px; }
+    .social a {
+      width: 42px; height: 42px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green-dark); border: 2px solid var(--ring);
+      transition: background .2s, color .2s, transform .2s, border-color .2s;
+    }
+    .social a:hover, .social a:focus-visible { background: var(--green); color: var(--yellow); border-color: var(--green); transform: translateY(-3px); }
+    .social svg { width: 20px; height: 20px; fill: currentColor; }
+    .aws {
+      display: flex; align-items: center; gap: 12px; padding: 10px 12px;
+      border-radius: 12px; background: var(--green-soft); color: var(--text);
+      text-decoration: none; text-align: left; transition: background .2s, transform .2s;
+    }
+    .aws:hover { background: var(--yellow-soft); transform: scale(1.03); }
+    .aws svg { width: 40px; height: 40px; flex-shrink: 0; border-radius: 8px; }
+    .aws small { display: block; color: var(--muted); font-size: .72rem; }
+    .aws strong { font-size: .95rem; }
+
+    /* Learning section */
+    .learn { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .learn article {
+      background: var(--card); border-radius: 16px; padding: 24px;
+      border-left: 6px solid var(--green);
+      box-shadow: 0 6px 18px rgba(15, 77, 39, .08);
+      transition: transform .25s ease;
+    }
+    .learn article:hover { transform: translateY(-5px); }
+    .learn .icon {
+      width: 46px; height: 46px; border-radius: 12px; margin-bottom: 12px;
+      background: var(--yellow); color: var(--green-dark);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .learn .icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .learn h3 { margin: 0 0 6px; font-size: 1.1rem; color: var(--green-dark); }
+    .learn p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 24px 16px 40px; }
+    footer b { color: var(--green); }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .member { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M18 46a12 12 0 0 1-1-23.9A16 16 0 0 1 47 24a11 11 0 0 1 0 22z" fill="#ffc933"/>
+          <circle cx="24" cy="29" r="3" fill="#1f7a3d"/>
+           <circle cx="40" cy="29" r="3" fill="#1f7a3d"/>
+    <path d="M24 38 Q32 45 40 38" fill="none" stroke="#1f7a3d" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <h1>Meet <span>Group 3</span></h1>
+    <p class="motto">“Small team. Beyond the cloud.”</p>
+    <span class="course">IV-ACSAD · ELEC3 Cloud Computing</span>
+  </header>
+
+  <main>
+    <h2 class="section-title">The Team</h2>
+    <p class="section-sub">Four students, one cloud-hosted page.</p>
+
+    <div class="members">
+      <section class="member">
+        <div class="avatar">J</div>
+        <h3>Jed</h3>
+        <span class="role">CLOUD ENGINEER</span>
+        <p class="bio">Learning how Amazon S3 serves a website.</p>
+        <div class="social">
+          <a href="https://github.com/edjjff" aria-label="Juan on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/francis-jed-dela-cruz-4295b638a/" aria-label="Juan on LinkedIn" title="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+        </div>
+        <a class="aws" href="https://aws.amazon.com/s3/">
+          <svg aria-hidden="true"><use href="#aws-s3"></use></svg>
+          <span><small>Favorite AWS service</small><strong>Amazon S3</strong></span>
+        </a>
+      </section>
+
+      <section class="member">
+        <div class="avatar">R</div>
+        <h3>Reymart</h3>
+        <span class="role">FRONTEND DEVELOPER</span>
+        <p class="bio">Likes clean layouts and fast pages.</p>
+        <div class="social">
+          <a href="https://github.com/reymarttskrt" aria-label="Maria on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/john-reymart-t-manginsay-6b56a8370" aria-label="Maria on LinkedIn" title="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+        </div>
+        <a class="aws" href="https://aws.amazon.com/lambda/">
+          <svg aria-hidden="true"><use href="#aws-lambda"></use></svg>
+          <span><small>Favorite AWS service</small><strong>AWS Lambda</strong></span>
+        </a>
+      </section>
+
+      <section class="member">
+        <div class="avatar">S</div>
+        <h3>Sarah</h3>
+        <span class="role">PROJECT LEAD</span>
+        <p class="bio">Keeps the group on schedule.</p>
+        <div class="social">
+          <a href="https://github.com/LUZADA-SARAH" aria-label="Pedro on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/sarah-luzada-980935447/" aria-label="Pedro on LinkedIn" title="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+        </div>
+        <a class="aws" href="https://aws.amazon.com/ec2/">
+          <svg aria-hidden="true"><use href="#aws-ec2"></use></svg>
+          <span><small>Favorite AWS service</small><strong>Amazon EC2</strong></span>
+        </a>
+      </section>
+
+      <section class="member">
+        <div class="avatar">C</div>
+        <h3>Cleford</h3>
+        <span class="role">QA TESTER</span>
+        <p class="bio">Tests every link before the group submits.</p>
+        <div class="social">
+          <a href="https://github.com/johnclefordricafranca" aria-label="Ana on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/john-cleford-ricafranca-984060447/" aria-label="Ana on LinkedIn" title="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+        </div>
+        <a class="aws" href="https://aws.amazon.com/dynamodb/">
+          <svg aria-hidden="true"><use href="#aws-dynamodb"></use></svg>
+          <span><small>Favorite AWS service</small><strong>Amazon DynamoDB</strong></span>
+        </a>
+      </section>
+    </div>
+
+    <!-- NEW SECTION: what we're learning -->
+    <h2 class="section-title">What We’re Learning</h2>
+    <p class="section-sub">Our cloud journey in ELEC3, one service at a time.</p>
+    <div class="learn">
+      <article>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="7" cy="7" r=".5"/><circle cx="7" cy="12" r=".5"/><circle cx="7" cy="17" r=".5"/></svg></div>
+        <h3>Static Hosting</h3>
+        <p>Putting a website online with Amazon S3 static website hosting, with no server to manage.</p>
+      </article>
+      <article>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Cloud Basics</h3>
+        <p>Compute, storage, databases and access control: what each service does and when to use it.</p>
+      </article>
+      <article>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.5-6 6-6s6 2.5 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></div>
+        <h3>Teamwork</h3>
+        <p>Sharing work on GitHub and building something together, each person with their own role.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>Hosted on <b>Amazon S3</b> static website hosting · Seatwork 3</footer>
+
+  <!-- Icon library -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.9 9h-3.1a15.7 15.7 0 00-1.4-5.5A8 8 0 0118.9 11zM12 4c.9 1.2 1.7 3.2 1.8 7h-3.6C10.3 7.200 11.100 5.200 12 4zM4.100 13h3.100a15.700 15.700 0 001.400 5.500A8 8 0 014.100 13zm3.100-2H4.100a8 8 0 014.500-5.500A15.700 15.700 0 007.200 11zM12 20c-.9-1.200-1.700-3.200-1.800-7h3.600c-.1 3.800-.9 5.800-1.800 7zm2.400-1.500a15.700 15.700 0 001.400-5.500h3.100a8 8 0 01-4.500 5.500z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="aws-s3" viewBox="0 0 64 64"><g stroke="none" fill="none" fill-rule="evenodd"><g fill="#7AA116"><rect x="0" y="0" width="64" height="64"></rect></g><g transform="translate(10.999800, 10.000200)" fill="#FFFFFF"><path d="M36.759,23.948 L36.993,22.131 C39.166,23.385 39.842,24.121 40.037,24.424 C39.713,24.485 38.832,24.509 36.759,23.948 L36.759,23.948 Z M19.5,11 C9.125,11 2.382,8.488 2,6.696 L2,6.511 C2.349,5.392 8.14,2 19.5,2 C30.84,2 36.632,5.381 37,6.505 L37,6.616 C36.724,8.446 29.961,11 19.5,11 L19.5,11 Z M34.818,23.362 C30.053,21.797 23.912,18.979 21.594,17.888 C21.535,16.786 20.628,15.906 19.512,15.906 C18.358,15.906 17.418,16.845 17.418,18 C17.418,19.154 18.358,20.094 19.512,20.094 C19.969,20.094 20.389,19.942 20.733,19.693 C23.132,20.822 29.619,23.798 34.558,25.38 L32.837,38.724 C32.583,40.352 27.919,42 19.497,42 C11.072,42 6.405,40.352 6.155,38.751 L2.435,9.814 C5.945,11.915 12.749,13 19.5,13 C26.25,13 33.054,11.915 36.565,9.815 L34.818,23.362 Z M39,6.5 C39,3.431 30.661,0 19.5,0 C8.339,0 -3.55271368e-15,3.431 -3.55271368e-15,6.5 L-3.55271368e-15,7.043 L4.174,39.033 C4.875,43.516 15.123,44 19.497,44 C23.869,44 34.113,43.516 34.818,39.007 L36.501,25.947 C37.778,26.279 38.812,26.456 39.616,26.455 C40.606,26.455 41.273,26.203 41.697,25.697 C42.047,25.281 42.185,24.756 42.085,24.221 C41.857,23 40.403,21.712 37.37,20.044 L37.27,19.989 L39,7.044 L39,6.5 Z"></path></g></g></symbol>
+    <symbol id="aws-lambda" viewBox="0 0 64 64"><g stroke="none" fill="none" fill-rule="evenodd"><g fill="#ED7100"><rect x="0" y="0" width="64" height="64"></rect></g><path d="M22.6794094,52 L13.5740701,52 L23.8376189,30.41 L28.3997494,39.861 L22.6794094,52 Z M24.7269406,27.667 C24.5606285,27.321 24.2120702,27.103 23.8306478,27.103 L23.8276601,27.103 C23.4452418,27.104 23.0966835,27.325 22.9323632,27.672 L11.0973143,52.569 C10.9499239,52.879 10.9708374,53.243 11.1540795,53.534 C11.3353298,53.824 11.6540117,54 11.9955989,54 L23.309802,54 C23.695208,54 24.0447622,53.777 24.2100784,53.428 L30.4044577,40.284 C30.5329264,40.01 30.5319305,39.692 30.3994783,39.42 L24.7269406,27.667 Z M51.0082382,52 L41.985557,52 L26.9547262,19.578 C26.7914017,19.226 26.4388599,19 26.0524581,19 L20.1279625,19 L20.1349337,12 L31.8146251,12 L46.7747483,44.42 C46.9380728,44.774 47.2906147,45 47.6790082,45 L51.0082382,45 L51.0082382,52 Z M52.0041191,43 L48.3143803,43 L33.354257,10.58 C33.1909326,10.226 32.8383907,10 32.450993,10 L19.1400486,10 C18.5913182,10 18.1451636,10.447 18.1441677,10.999 L18.1362006,19.999 C18.1362006,20.265 18.2407681,20.519 18.4269979,20.707 C18.6142235,20.895 18.8671772,21 19.1310857,21 L25.4170861,21 L40.4479168,53.422 C40.6112413,53.774 40.9627873,54 41.350185,54 L52.0041191,54 C52.5548412,54 53,53.552 53,53 L53,44 C53,43.448 52.5548412,43 52.0041191,43 L52.0041191,43 Z" fill="#FFFFFF"></path></g></symbol>
+    <symbol id="aws-ec2" viewBox="0 0 64 64"><g stroke="none" fill="none" fill-rule="evenodd"><g fill="#ED7100"><rect x="0" y="0" width="64" height="64"></rect></g><path d="M22,41 L41,41 L41,23 L22,23 L22,41 Z M43,23 L46,23 L46,25 L43,25 L43,27 L46,27 L46,29 L43,29 L43,31 L46,31 L46,33 L43,33 L43,36 L46,36 L46,38 L43,38 L43,40 L46,40 L46,42 L42.863,42 C42.608,42.587 42.023,43 41.344,43 L41,43 L41,46 L39,46 L39,43 L37,43 L37,46 L35,46 L35,43 L33,43 L33,46 L31,46 L31,43 L29,43 L29,46 L27,46 L27,43 L24,43 L24,46 L22,46 L22,43 L21.656,43 C20.977,43 20.392,42.587 20.137,42 L18,42 L18,40 L20,40 L20,38 L18,38 L18,36 L20,36 L20,33 L18,33 L18,31 L20,31 L20,29 L18,29 L18,27 L20,27 L20,25 L18,25 L18,23 L20,23 L20,22.656 C20,21.743 20.743,21 21.656,21 L22,21 L22,18 L24,18 L24,21 L27,21 L27,18 L29,18 L29,21 L31,21 L31,18 L33,18 L33,21 L35,21 L35,18 L37,18 L37,21 L39,21 L39,18 L41,18 L41,21 L41.344,21 C42.257,21 43,21.743 43,22.656 L43,23 Z M32,52 L12,52 L12,32 L16,32 L16,30 L11.843,30 C10.826,30 10,30.827 10,31.843 L10,52.157 C10,53.173 10.826,54 11.843,54 L32.157,54 C33.174,54 34,53.173 34,52.157 L34,48 L32,48 L32,52 Z M54,11.843 L54,32.157 C54,33.173 53.174,34 52.157,34 L48,34 L48,32 L52,32 L52,12 L32,12 L32,16 L30,16 L30,11.843 C30,10.827 30.826,10 31.843,10 L52.157,10 C53.174,10 54,10.827 54,11.843 L54,11.843 Z" fill="#FFFFFF"></path></g></symbol>
+    <symbol id="aws-dynamodb" viewBox="0 0 64 64"><g stroke="none" fill="none" fill-rule="evenodd"><g fill="#C925D1"><rect x="0" y="0" width="64" height="64"></rect></g><path d="M46.5858287,25.2492763 L43.0008475,25.2492763 C42.6728493,25.2492763 42.3658509,25.086523 42.1788519,24.8145936 C41.9918528,24.5416533 41.9488531,24.1939071 42.0648525,23.8835638 L44.5578394,17.162156 L35.6448862,17.162156 L31.5539077,26.2601663 L36.0008843,26.2601663 C36.3218827,26.2601663 36.6238811,26.4158434 36.8128801,26.6806966 C36.9998791,26.943528 37.0518788,27.2821762 36.9488794,27.5904976 L33.2888986,38.6910812 L46.5858287,25.2492763 Z M49.7068123,24.9530855 L31.7079069,43.1491063 C31.5159079,43.3442081 31.2589093,43.4452971 31.0009106,43.4452971 C30.8189116,43.4452971 30.6379125,43.3957635 30.4759134,43.2946744 C30.0809155,43.0480173 29.9049164,42.5597574 30.0529156,42.1149658 L34.6128916,28.2819464 L30.0009159,28.2819464 C29.6609177,28.2819464 29.3449193,28.1070624 29.1599203,27.8189588 C28.9769213,27.5288333 28.9499214,27.1659238 29.0909207,26.8525479 L34.0908944,15.7327574 C34.2528935,15.3718697 34.6078917,15.1403759 35.0008896,15.1403759 L46.0008318,15.1403759 C46.32883,15.1403759 46.6358284,15.3031292 46.8228274,15.5750586 C47.0098265,15.8479989 47.0528262,16.1957451 46.9378268,16.5060883 L44.44384,23.2274962 L48.999816,23.2274962 C49.4038139,23.2274962 49.769812,23.4741534 49.9238111,23.8512154 C50.0788103,24.2292882 49.9928108,24.663971 49.7068123,24.9530855 L49.7068123,24.9530855 Z M41.0008581,44.2196388 C38.2908723,46.1059597 33.3138985,47.1016863 28.5329236,47.1016863 C23.7169489,47.1016863 18.6959753,46.0928181 15.9999895,44.1781923 L16.0009895,47.9943023 C16.0009895,49.6582273 20.7689644,51.9782199 28.5329236,51.9782199 C36.0278842,51.9782199 41.0008581,49.2761108 41.0008581,47.4888572 L41.0008581,44.2196388 Z M43.0648472,40.9504204 C43.0648472,41.1374351 43.0328474,41.3173735 43.0008475,41.4963011 L43.0008475,47.4888572 C43.0008475,51.0795387 36.5108817,54 28.5329236,54 C21.6299599,54 14.6619965,52.1106465 14.0599997,48.4997473 L14.001,48.4997473 L14,43.4452971 L14,30.3037265 L14,16.1512659 L14.001,16.1512659 C14.001,12.1552176 21.4879606,10 28.5329236,10 C32.4739029,10 36.262883,10.6398934 38.9298689,11.755916 L38.163873,13.6240408 C35.7318858,12.6050636 32.2209042,12.0217801 28.5329236,12.0217801 C20.7689644,12.0217801 16.0009895,14.4266875 16.0009895,16.1512659 C16.0009895,17.8758443 20.7689644,20.2807517 28.5329236,20.2807517 C28.7279226,20.2807517 28.9319215,20.2817626 29.1289205,20.2736755 L29.2069201,22.2934338 C28.9819212,22.3025318 28.7579224,22.3025318 28.5329236,22.3025318 C23.7159489,22.3025318 18.6959753,21.2936636 15.9999895,19.3790378 L15.9999895,23.7369848 L16.0009895,23.7369848 L16.0009895,23.7541699 C16.0059895,24.2838763 16.4899869,24.8974866 17.3649823,25.4736939 C19.3469719,26.7615678 22.9149531,27.642053 26.9039322,27.8250241 L26.8129326,29.8447824 C22.6869543,29.6547351 19.0629734,28.7762717 16.7269857,27.4287552 C16.4169873,27.7269678 16.0009895,28.4851353 16.0009895,28.8955567 C16.0009895,30.6201351 20.7689644,33.0250425 28.5329236,33.0250425 C29.2709197,33.0250425 29.9979159,32.9997703 30.6949122,32.9502366 L30.8359115,34.9669623 C30.0919154,35.0205394 29.3169195,35.0468226 28.5329236,35.0468226 C23.7159489,35.0468226 18.6959753,34.0379543 15.9999895,32.1233286 L15.9999895,35.7928594 L16.0009895,35.7928594 C16.0059895,36.339751 16.4899869,36.9533612 17.3649823,37.5295685 C19.6329704,39.0044571 23.9139479,39.9233562 28.5329236,39.9233562 L28.8629219,39.9233562 L28.8629219,41.9451362 L28.5329236,41.9451362 C23.7549487,41.9451362 18.6729754,40.9372789 16.0009895,39.4017369 C15.6789912,39.6999495 16.0009895,40.4126269 16.0009895,40.9504204 C16.0009895,42.6749989 20.7689644,45.0799063 28.5329236,45.0799063 C36.2978828,45.0799063 41.0648577,42.6749989 41.0648577,40.9504204 C41.0648577,40.3408537 40.4658609,39.7757662 39.9728635,39.4118458 C39.5638656,39.658503 39.113868,39.8950512 38.6008707,40.1113817 L37.8328747,38.2442678 C38.3638719,38.0208611 38.8228695,37.7812802 39.1968675,37.5326012 C40.2978617,36.798695 41.0008581,35.7544456 41.0008581,35.3581767 L43.0008475,35.3581767 C43.0008475,36.2983045 42.3798508,37.3051509 41.583855,38.1330699 C42.7758487,39.1732757 43.0648472,40.2114598 43.0648472,40.9504204 L43.0648472,40.9504204 Z"  fill="#FFFFFF"></path></g></symbol>
+  </svg>
+</body>
+</html>
