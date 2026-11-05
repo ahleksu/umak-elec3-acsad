@@ -1,0 +1,8 @@
+ANSWER_1: The Course Materials Portal application failed because it could not read the file /etc/course-portal/portal.conf due to a permission denied error.
+ANSWER_2: The file portal.conf has permission 600, meaning the owner (root) has read and write access, while the group (course-portal) and others have no access at all (0). Even though the course-portal account belongs to the course-portal group, that group has zero permissions on this file, so group membership doesn't help. Since the account is neither the owner nor granted any access as others, it cannot read the file.
+ANSWER_3: 640
+ANSWER_3_WHY: 400 is wrong because it only gives read access to the owner, the group still gets nothing, so course-portal still can't read the file. 755 is wrong because it gives the group execute access it doesn't need, and it also makes the file readable by others, which is more access than necessary. 777 is wrong because it gives read, write, and execute access to everyone, including others, which is a major security risk since anyone could modify or even try to run the config file.
+ANSWER_4_ORDER: B, G, E, D, F, A, I, C, H
+ANSWER_5: chmod 777 gives write access to everyone, including others who have no reason to touch the file, meaning anyone could accidentally or intentionally modify or corrupt portal.conf, not just the intended owner.
+ANSWER_6: Beyond the command succeeding, I'd check that the app log no longer shows the Permission denied error and instead shows normal operation, and I'd also confirm by loading the Course Materials Portal in a browser to verify the content actually displays for a user.
+ANSWER_7_BRIDGE: component=configuration, detect=monitoring, recover=a fix action, proof=testing

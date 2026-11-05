@@ -42,6 +42,14 @@ currently-active ones are:
 | [`activities/assignment-1/`](activities/assignment-1/) | Assignment 1 — Course Materials Portal: Diagnose, Fix, and Look Ahead |
 | [`activities/lab-1/`](activities/lab-1/) | Lab 1: Write and Attach an IAM Policy |
 | [`activities/lab-2/`](activities/lab-2/) | Lab 2: Build an EC2 Auto Scaling Group |
+| [`activities/assignment-2/`](activities/assignment-2/) | Assignment 2: Explore a VPC |
+| [`activities/lab-3/`](activities/lab-3/) | Lab 3: VPC Subnet Planning Case Study |
+| [`activities/seatwork-2/`](activities/seatwork-2/) | Seatwork 2: Build Your Group Linktree Page |
+| [`activities/seatwork-3/`](activities/seatwork-3/) | Seatwork 3: Host Your Linktree Page on Amazon S3 |
+| [`activities/assignment-3/`](activities/assignment-3/) | Assignment 3: Price the Database Before You Build It |
+| [`activities/seatwork-4/`](activities/seatwork-4/) | Seatwork 4: Write Your First Lambda Function |
+| [`activities/lab-4/`](activities/lab-4/) | Lab 4: Guided Serverless Endpoint |
+| [`activities/assignment-4/`](activities/assignment-4/) | Assignment 4: Price the Serverless Endpoint |
 | [`templates/`](templates/)                         | Shared templates (evidence write-ups, etc.)                      |
 | [`submissions/`](submissions/)                     | Where your work goes — one folder per person/group, per activity |
 | [`.github/`](.github/)                             | PR template and the CI workflow that checks submissions          |
@@ -63,4 +71,4 @@ activity — see each activity's own `.md` file for its exact weight.
 
 ## Questions
 
-Ask me in our class channel, or open an Issue on this repo.
+Ask me in our group chat, or open an Issue on this repo.
