@@ -34,4 +34,3 @@ How to use this template:
 | eyakmwamwa | documented the whole process |
 | carlcawas | directed the step-by-step process from the seatwork.md file |
 | mik4rin | assisted with the process and verified if the process is correct |
-
