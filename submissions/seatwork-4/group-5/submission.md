@@ -48,6 +48,8 @@ Why does the second REPORT line have no Init Duration?
 
 Init Duration measures the initialization phase, when Lambda creates a new execution environment, starts the Python runtime, and loads our code. That only happens on a cold start. After our first test, Lambda kept the environment alive, and because we pressed Test again right away, the second run reused it. It skipped initialization and went straight to lambda_handler, so there was nothing to time. That is also why the second run has no INIT_START line. A cold start would return after a new deploy, a code change, or a long idle period.
 
+## Screenshots
+
 ![Code tab with our deployed handler](code.png)
 
 ![Test result with Executing function: succeeded](test.png)
