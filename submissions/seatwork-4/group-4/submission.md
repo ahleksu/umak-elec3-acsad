@@ -67,9 +67,6 @@ The second REPORT line does not show any Init Duration because the Lambda functi
 | GitHub username | What this groupmate did |
 | --- | --- |
 | Steeshesh | Created the `umak-elec3-acsad-g04-api` Lambda function in `ap-southeast-1` with Python 3.13 and configured the `umak-elec3-acsad-g04-lambda-role` execution role. |
-
 | Note-Program | Wrote and deployed the Python `lambda_handler` code returning the group JSON greeting and captured `code.png`. |
-
 | EvapeGT | Configured the `hello` test event, executed the cold and warm start test runs, and captured `test.png`. |
-
 | chupapichuros | Located the CloudWatch log stream, extracted the two `REPORT` lines (`report.png`), and answered the Init Duration question in `submission.md`. |
