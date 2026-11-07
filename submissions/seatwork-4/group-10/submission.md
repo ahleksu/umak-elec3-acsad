@@ -14,7 +14,7 @@ How to use this template:
 
 - Group number: 10
 - Section: IV - ACSAD
-- Group IAM user: acsa-g10
+- Group IAM user: acsad-g10
 - Function name: umak-elec3-acsad-g10-api
 
 ## Handler code
