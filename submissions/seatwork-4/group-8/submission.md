@@ -62,7 +62,7 @@ Therefore, the second REPORT line has no Init Duration because Lambda reused the
 
 ## Screenshots
 
-![Code tab with our deployed handler](Code.png)
+![Code tab with our deployed handler](code.png)
 
 ![Test result with Executing function: succeeded](test.png)
 
