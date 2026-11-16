@@ -34,20 +34,20 @@ How to use this template:
 
 1. In Lab 4, your API answered `curl` and the address bar of your browser. In Step 3, the same API did not answer your page. Why?
 
-   CORS is a browser rule for scripts on a page, and `curl` and the address bar are not scripts on a page, so they just send the request and show the answer. In Step 3, the guestbook's `fetch()` ran on our site's origin (`http`, the S3 website host) and called our API on a different origin (`https`, the `execute-api` host). The browser lets a script read a cross-origin answer only when the API sends `Access-Control-Allow-Origin` with our site in it, and our API did not send that header yet. The API still answered (the Console shows `200 (OK)`), but the browser blocked our page from reading it (MDN Web Docs, n.d.-a).
+   CORS is a browser rule for scripts on a page, so `curl` and the address bar are not affected by it. Our guestbook script runs on the S3 site's origin and calls the API on a different origin, so the browser blocked our page from reading the answer because the API did not yet send `Access-Control-Allow-Origin` for our site (MDN Web Docs).
 
 2. Which pillar of the AWS Well-Architected Framework does your throttle serve? Explain in two sentences.
 
-   Our throttle serves the Reliability pillar, through best practice REL05-BP02, "Throttle requests to mitigate resource exhaustion due to unexpected increases in demand" (Amazon Web Services, n.d.). API Gateway's token bucket (rate 2, burst 5) answers extra requests with `429 Too Many Requests` before they reach our Lambda function and DynamoDB table, so a flood of requests to our public API cannot exhaust them, and normal guestbook posts keep working.
+   Our throttle serves the Reliability pillar, which says to throttle requests so that sudden spikes do not exhaust a workload's resources (Amazon Web Services). API Gateway answers requests above 2 per second (burst 5) with `429 Too Many Requests` before they reach our Lambda function and DynamoDB table, so normal guestbook use keeps working.
 
 3. Your guestbook shows each message with `textContent`. What could a visitor do if the page put each message into the page as HTML with `innerHTML`?
 
-   A visitor could post a message that holds HTML, such as `<img src="x" onerror="...">`. With `innerHTML`, the browser would parse it and run that JavaScript in the browser of everyone who opens our page, because the message stays in our table. This is stored cross-site scripting (XSS): the script could change our page, redirect visitors, or send requests as them. `textContent` shows the message as plain text, so the tag is displayed and never runs (MDN Web Docs, n.d.-b).
+   A visitor could post a message with HTML that runs JavaScript, such as `<img src="x" onerror="...">`, and it would run for everyone who opens our page (stored cross-site scripting). `textContent` shows the message as plain text, so the code never runs (MDN Web Docs).
 
 ## References
 
-Amazon Web Services. (n.d.). *REL05-BP02 Throttle requests*. AWS Well-Architected Framework, Reliability Pillar. https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_mitigate_interaction_failure_throttle_requests.html
+Amazon Web Services. *REL05-BP02 Throttle requests*. AWS Well-Architected Framework, Reliability Pillar. https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_mitigate_interaction_failure_throttle_requests.html
 
-MDN Web Docs. (n.d.-a). *Cross-Origin Resource Sharing (CORS)*. Mozilla. https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
+MDN Web Docs. *Cross-Origin Resource Sharing (CORS)*. Mozilla. https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
 
-MDN Web Docs. (n.d.-b). *Element: innerHTML property*. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+MDN Web Docs. *Element: innerHTML property*. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
