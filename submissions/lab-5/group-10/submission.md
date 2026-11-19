@@ -17,8 +17,8 @@ How to use this template:
 - Group number: group-10
 - Section: ACSAD
 - Group IAM user: acsad-group-10
-- Website endpoint: <answer>
-- HTTP API name: <answer>
+- Website endpoint: http://umak-elec3-acsad-g10-linktree.s3-website-ap-southeast-1.amazonaws.com
+- HTTP API name: umak-elec3-acsad-g10-api
 
 ## Screenshots
 
