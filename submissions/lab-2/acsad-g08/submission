@@ -14,7 +14,7 @@
 ## Proof (Screenshots)
 1. **Activity History:** Add a screenshot showing the Auto Scaling group's Activity history when the second instance launched.
    
-   *(Replace this line with your Activity History screenshot)*
+  
 
 2. **CloudWatch Alarm:** Add a screenshot of the target tracking alarm in the "In alarm" state.
 
