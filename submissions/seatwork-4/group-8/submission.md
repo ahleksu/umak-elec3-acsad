@@ -1,4 +1,4 @@
-# Seatwork 4 Submission.
+# Seatwork 4 Submission
 
 <!--
 How to use this template:
@@ -12,30 +12,18 @@ How to use this template:
 
 ## About us
 
-- Group number:8
-- Section: IV - ACSAD
-- Group IAM user: acsad-g08
-- Function name: umak-elec3-acsad-g08-api
+Section: ACSAD
+Group number: 8
+Group IAM user: acsad-g08
+Function name: umak-elec3-acsad-g08-apiSection: ACSAD
+Group number: 8
+Group IAM user: acsad-g08
+Function name: umak-elec3-acsad-g08-api
 
 ## Handler code
 
 ```python
-import json
-
-GROUP_NAME = "Group 8 of IV-ACSAD"  # Change this to your group's name.
-
-
-def lambda_handler(event, context):
-    visitor = event.get("name", "visitor")
-    body = {
-        "message": f"Hello, {visitor}! Greetings from {GROUP_NAME}.",
-        "group": GROUP_NAME,
-    }
-    return {
-        "statusCode": 200,
-        "headers": {"Content-Type": "application/json"},
-        "body": json.dumps(body),
-    }
+<answer>
 ```
 
 ## REPORT lines
@@ -43,22 +31,20 @@ def lambda_handler(event, context):
 First run, a cold start:
 
 ```text
-REPORT RequestId: 394a751f-404f-4753-83fa-e44c6a610928	Duration: 1.79 ms	Billed Duration: 79 ms	Memory Size: 128 MB	Max Memory Used: 31 MB	Init Duration: 76.57 ms	
+<answer>
 ```
 
 Second run, a warm start:
 
 ```text
-REPORT RequestId: 0f8eec6d-acb4-44e0-a0e8-2abe08ce1622	Duration: 1.62 ms	Billed Duration: 2 ms	Memory Size: 128 MB	Max Memory Used: 31 MB	
+<answer>
 ```
 
 ## Question
 
 Why does the second REPORT line have no Init Duration?
 
-During the first run, AWS Lambda created a new execution environment and initialized the function, which took 76.57 ms. During the second run, Lambda reused the existing execution environment, so initialization was not needed again.
-
-Therefore, the second REPORT line has no Init Duration because Lambda reused the warm execution environment from the first invocation, avoiding the initialization process.
+<answer>
 
 ## Screenshots
 
@@ -72,6 +58,6 @@ Therefore, the second REPORT line has no Init Duration because Lambda reused the
 
 | GitHub username | What this groupmate did |
 | --- | --- |
-| silverperson| Assisted with reviewing the assignment instructions and checking the submission requirements. |
-| szapatak12153026-hash | Assisted with reviewing the Lambda implementation and verifying the required outputs. |
-| JanRodCanlas | Led the completion of the assignment, prepared the Lambda handler code, documented the REPORT lines, answered the technical question, and organized the GitHub submission. |
+| <answer> | <answer> |
+| <answer> | <answer> |
+| <answer> | <answer> |
